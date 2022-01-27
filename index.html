@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/style/main.css">
-    <title>Calculator</title>
-</head>
-<body>
-    <main id="app">
-        <div class="calc-body">
-            <section class="calc-screen">0</section>
-            <section class="top-buttons">
-                <button><i class="fas fa-redo-alt"></i></button>
-                <button><i class="fas fa-backspace"></i></button>
-                <button><i class="fas fa-equals"></i></button>
-            </section>
-            <section class="bottom-buttons">
-                <main class="number-buttons">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                </main>
-                <aside class="operation-buttons">
-                    <button><i class="fas fa-divide"></i></button>
-                    <button><i class="fas fa-times"></i></button>
-                    <button><i class="fas fa-minus"></i></button>
-                    <button><i class="fas fa-plus"></i></button>
-                </aside>
-            </section>
-        </div>
-    </main>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="src/style/main.css" />
+		<script defer src="src/app/elements.js"></script>
+		<script defer src="src/app/main.js"></script>
+		<title>Calculator</title>
+	</head>
+	<body>
+		<main id="app">
+			<div class="calc-body">
+				<section class="calc-screen"><div id="screen">0</div></section>
+				<section class="top-buttons">
+					<button id="reset"><i class="fas fa-redo-alt"></i></button>
+					<button id="backspace">
+						<i class="fas fa-backspace"></i>
+					</button>
+					<button id="equals"><i class="fas fa-equals"></i></button>
+				</section>
+				<section class="bottom-buttons">
+					<main class="number-buttons">
+						<button>7</button>
+						<button>8</button>
+						<button>9</button>
+						<button>4</button>
+						<button>5</button>
+						<button>6</button>
+						<button>1</button>
+						<button>2</button>
+						<button>3</button>
+					</main>
+					<aside class="operation-buttons">
+						<button id="divide">
+							<i class="fas fa-divide"></i>
+						</button>
+						<button id="multiply">
+							<i class="fas fa-times"></i>
+						</button>
+						<button id="substract">
+							<i class="fas fa-minus"></i>
+						</button>
+						<button id="add"><i class="fas fa-plus"></i></button>
+					</aside>
+				</section>
+			</div>
+		</main>
+	</body>
 </html>
