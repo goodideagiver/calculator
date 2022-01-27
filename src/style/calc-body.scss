@@ -32,6 +32,7 @@ body {
 .calc-screen {
 	> div {
 		transition: 0.1s;
+		width: 100%;
 	}
 	height: 55px;
 	overflow: hidden;
