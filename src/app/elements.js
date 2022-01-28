@@ -34,6 +34,14 @@ const backspaceAction = () => {
 
 const removeLastChar = (text) => {
 	text = text.substring(0, text.length - 1);
+	if (screen.innerText === '0') {
+		FIRST_INPUT = true;
+		return;
+	} else if (screen.innerText === '' || text.length === 1) {
+		FIRST_INPUT = true;
+		updateScreen(0);
+		return;
+	}
 	updateScreen(text);
 };
 
