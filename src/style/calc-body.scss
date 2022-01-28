@@ -30,11 +30,32 @@ body {
 }
 
 .calc-screen {
-	> div {
-		transition: 0.1s;
+	position: relative;
+	&::before {
+		pointer-events: none;
+		position: absolute;
 		width: 100%;
+		left: 0;
+		top: 0;
+		content: '';
+		background: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.978) 0%,
+			rgba(255, 255, 255, 0) 10%,
+			rgba(255, 255, 255, 0) 95%,
+			rgba(0, 0, 0, 0.578) 100%
+		);
+		height: 100%;
+		z-index: 2;
 	}
-	height: 55px;
+	> div {
+		position: relative;
+		transition: 0.1s;
+		width: 332px;
+		overflow-x: auto;
+		z-index: 1;
+	}
+	height: 65px;
 	overflow: hidden;
 	display: flex;
 	justify-content: right;
