@@ -7,6 +7,7 @@ const replaceOperators = (input) => {
 const countExpression = () => {
 	if (!lastCharValidate()) {
 		alert('Input error');
+		clearScreen();
 		return;
 	}
 	const input = replaceOperators(screen.innerText);
@@ -15,6 +16,7 @@ const countExpression = () => {
 	console.log('compiled :', compiled);
 	if (compiled) {
 		const result = compiled.evaluate();
+		!result ? alert('Error') : 0;
 		console.log('result :', result);
 		updateScreen(result.toFixed(2));
 	} else {
