@@ -109,13 +109,19 @@ body {
 }
 
 .number-buttons {
-	display: grid;
-	grid-template-columns: 33.3% 33.3% 33.3%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	button {
+		flex: 1 0 30%;
 		aspect-ratio: 1/1;
 		font-size: 1.5rem;
 		font-weight: bolder;
 		background-color: rgb(106, 248, 248);
+		&:last-child {
+			min-height: 74px;
+			aspect-ratio: unset;
+		}
 	}
 }
 
