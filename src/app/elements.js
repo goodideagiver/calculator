@@ -38,7 +38,9 @@ const removeLastChar = (text) => {
 };
 
 const addOperator = (e, sign) => {
-	if (FIRST_INPUT) {
+	let screenVal = screen.innerText;
+	screenVal = screenVal.substring(screenVal.length - 1, screenVal.length);
+	if (FIRST_INPUT || isNaN(screenVal)) {
 		return;
 	} else {
 		updateScreen(screen.innerText + sign);
