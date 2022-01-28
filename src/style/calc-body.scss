@@ -134,3 +134,21 @@ body {
 		}
 	}
 }
+
+button,
+.calc-screen {
+	opacity: 0;
+	transform: scale(0.1);
+	animation: key-pop 1.5s forwards ease-in-out;
+}
+
+@keyframes key-pop {
+	from {
+		opacity: 0;
+		transform: scale(0.1);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}

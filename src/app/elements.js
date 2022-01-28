@@ -73,8 +73,12 @@ substract.addEventListener('click', () => {
 	addOperator(0, `-`);
 });
 
-numberBtns.forEach((element) => {
+numberBtns.forEach((element, index) => {
 	element.addEventListener('click', tellNumber);
 });
 reset.addEventListener('click', clearScreen);
 backspace.addEventListener('click', backspaceAction);
+
+document.querySelectorAll('button').forEach((element, index) => {
+	element.style.animationDelay = `0.${index}s`;
+});
