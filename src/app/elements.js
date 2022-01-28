@@ -20,10 +20,6 @@ const tellNumber = (e) => {
 	}
 };
 
-numberBtns.forEach((element) => {
-	element.addEventListener('click', tellNumber);
-});
-
 const updateScreen = (value) => {
 	screen.style.transform = 'translate(0,100%)';
 	setTimeout(() => {
@@ -31,3 +27,28 @@ const updateScreen = (value) => {
 		screen.style.transform = 'translate(0,0)';
 	}, 100);
 };
+
+const addOperator = (e, sign) => {
+	if (FIRST_INPUT) {
+		return;
+	} else {
+		updateScreen(screen.innerText + sign);
+	}
+};
+
+multiply.addEventListener('click', () => {
+	addOperator(0, `x`);
+});
+divide.addEventListener('click', () => {
+	addOperator(0, `:`);
+});
+add.addEventListener('click', () => {
+	addOperator(0, `+`);
+});
+substract.addEventListener('click', () => {
+	addOperator(0, `-`);
+});
+
+numberBtns.forEach((element) => {
+	element.addEventListener('click', tellNumber);
+});
