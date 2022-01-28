@@ -28,12 +28,26 @@ const updateScreen = (value) => {
 	}, 1);
 };
 
+const backspaceAction = () => {
+	removeLastChar(screen.innerText);
+};
+
+const removeLastChar = (text) => {
+	text = text.substring(0, text.length - 1);
+	updateScreen(text);
+};
+
 const addOperator = (e, sign) => {
 	if (FIRST_INPUT) {
 		return;
 	} else {
 		updateScreen(screen.innerText + sign);
 	}
+};
+
+const clearScreen = () => {
+	FIRST_INPUT = true;
+	updateScreen(0);
 };
 
 multiply.addEventListener('click', () => {
@@ -52,3 +66,5 @@ substract.addEventListener('click', () => {
 numberBtns.forEach((element) => {
 	element.addEventListener('click', tellNumber);
 });
+reset.addEventListener('click', clearScreen);
+backspace.addEventListener('click', backspaceAction);
