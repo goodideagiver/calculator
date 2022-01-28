@@ -22,10 +22,10 @@ const tellNumber = (e) => {
 
 const updateScreen = (value) => {
 	//screen.style.transform = 'translate(0,100%)';
-	setTimeout(() => {
+
 		screen.innerText = value;
 		//screen.style.transform = 'translate(0,0)';
-	}, 1);
+
 };
 
 const backspaceAction = () => {

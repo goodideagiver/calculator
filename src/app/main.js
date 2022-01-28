@@ -16,11 +16,20 @@ const countExpression = () => {
 	console.log('compiled :', compiled);
 	if (compiled) {
 		const result = compiled.evaluate();
-		!result ? alert('Error') : 0;
-		console.log('result :', result);
-		updateScreen(result.toFixed(2));
+		updateScreen(result);
+		divByZero();
 	} else {
 		alert('Could not compile');
+	}
+};
+
+const divByZero = () => {
+	if (screen.innerText === 'Infinity') {
+		alert('Division by 0 is illegal');
+		screen.innerText = 0;
+	} else if (screen.innerText === 'NaN') {
+		alert('Result is not a number');
+		screen.innerText = 0;
 	}
 };
 
