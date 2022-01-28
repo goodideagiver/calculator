@@ -1,6 +1,6 @@
 const replaceOperators = (input) => {
-	let replaced = input.replace('x', '*');
-	replaced = replaced.replace(':', `/`);
+	let replaced = replaceAll(input, 'x', '*');
+	replaced = replaceAll(replaced, ':', `/`);
 	return replaced;
 };
 
@@ -36,6 +36,10 @@ const lastCharValidate = () => {
 		backspaceAction();
 		return 0;
 	}
+};
+
+const replaceAll = (str, match, replacement) => {
+	return str.split(match).join(replacement);
 };
 
 equals.addEventListener('click', countExpression);
