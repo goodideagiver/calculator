@@ -10,10 +10,10 @@ const screen = document.querySelector('#screen');
 let FIRST_INPUT = true;
 
 const tellNumber = (e) => {
-	console.log(e.target.innerText);
+	
 	if (FIRST_INPUT) {
 		updateScreen(e.target.innerText);
-		console.log('first');
+		
 		FIRST_INPUT = false;
 	} else {
 		updateScreen(screen.innerText + e.target.innerText);
@@ -21,11 +21,7 @@ const tellNumber = (e) => {
 };
 
 const updateScreen = (value) => {
-	//screen.style.transform = 'translate(0,100%)';
-
-		screen.innerText = value;
-		//screen.style.transform = 'translate(0,0)';
-
+	screen.innerText = value;
 };
 
 const backspaceAction = () => {
