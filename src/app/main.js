@@ -11,9 +11,9 @@ const countExpression = () => {
 		return;
 	}
 	const input = replaceOperators(screen.innerText);
-	console.log('input :', input);
+	
 	const compiled = math.compile(input);
-	console.log('compiled :', compiled);
+	
 	if (compiled) {
 		const result = compiled.evaluate();
 		updateScreen(result);
@@ -38,7 +38,7 @@ const lastCharValidate = () => {
 		screen.innerText.length - 1,
 		screen.innerText.length
 	);
-	console.log('validate :', validate);
+	
 	if (!isNaN(validate)) {
 		return 1;
 	} else {
