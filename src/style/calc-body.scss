@@ -62,14 +62,10 @@ body {
 	align-items: center;
 	color: #ffffffe0;
 	background-color: black;
-	margin: 5px;
 	font-size: 40px;
 	text-align: right;
 	padding: 5px;
 	border-radius: 5px;
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
-		rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
-		rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 
 .calc-body {
@@ -79,9 +75,6 @@ body {
 		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
 		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 	padding: 10px;
-	button {
-		margin: 2px;
-	}
 }
 
 .top-buttons {
@@ -140,6 +133,8 @@ button,
 	opacity: 0;
 	transform: scale(0.1);
 	animation: key-pop 1.5s forwards ease-in-out;
+	margin: 2px;
+	border-radius: 8px !important;
 }
 
 @keyframes key-pop {
@@ -150,5 +145,18 @@ button,
 	to {
 		opacity: 1;
 		transform: none;
+	}
+}
+
+@media (min-width: 700px) {
+	button {
+		cursor: pointer;
+		transition: 0.2s !important;
+		&:hover {
+			filter: brightness(0.8);
+		}
+		&:active {
+			transform: scale(0.95) !important;
+		}
 	}
 }
