@@ -10,10 +10,9 @@ const screen = document.querySelector('#screen');
 let FIRST_INPUT = true;
 
 const tellNumber = (e) => {
-	
 	if (FIRST_INPUT) {
 		updateScreen(e.target.innerText);
-		
+
 		FIRST_INPUT = false;
 	} else {
 		updateScreen(screen.innerText + e.target.innerText);
@@ -29,7 +28,7 @@ const backspaceAction = () => {
 };
 
 const removeLastChar = (text) => {
-	text = text.substring(0, text.length - 1);
+	calcText = text.substring(0, text.length - 1);
 	if (screen.innerText === '0') {
 		FIRST_INPUT = true;
 		return;
@@ -38,7 +37,7 @@ const removeLastChar = (text) => {
 		updateScreen(0);
 		return;
 	}
-	updateScreen(text);
+	updateScreen(calcText);
 };
 
 const addOperator = (e, sign) => {
